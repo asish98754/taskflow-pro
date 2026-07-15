@@ -1,4 +1,14 @@
+"use client";
+
 import MainLayout from "@/components/layout/MainLayout";
+
+import Hero from "@/components/sections/Hero";
+import Features from "@/components/sections/Features";
+import DashboardPreview from "@/components/sections/DashboardPreview";
+import Pricing from "@/components/sections/Pricing";
+import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
+import Contact from "@/components/sections/Contact";
 
 export default function Home(){
 
@@ -6,46 +16,19 @@ return (
 
 <MainLayout>
 
-<section
-className="
-min-h-screen
-flex
-items-center
-justify-center
-"
->
+<Hero/>
 
-<div
-className="
-text-center
-"
->
+<Features/>
 
-<h1
-className="
-text-5xl
-font-bold
-"
->
+<DashboardPreview/>
 
-Build Better Tasks With TaskFlow
+<Pricing/>
 
-</h1>
+<Testimonials/>
 
-<p
-className="
-mt-5
-text-gray-600
-"
->
+<FAQ/>
 
-A modern SaaS platform for managing your business workflow.
-
-</p>
-
-</div>
-
-</section>
+<Contact/>
 
 </MainLayout>
 
