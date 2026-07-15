@@ -14,7 +14,7 @@ items-center
 justify-between
 px-8
 py-5
-bg-gradient-to-r
+bg-linear-to-r
 from-blue-600
 via-blue-500
 to-cyan-600
@@ -72,3 +72,4 @@ md:hidden
 )
 
 }
+

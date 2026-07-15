@@ -8,7 +8,7 @@ return (
 className="
 py-20
 px-6
-bg-gradient-to-b
+bg-linear-to-b
 from-blue-50
 to-cyan-50
 "
@@ -20,7 +20,7 @@ className="
 text-5xl
 font-bold
 text-center
-bg-gradient-to-r
+bg-linear-to-r
 from-blue-600
 to-cyan-600
 bg-clip-text
@@ -74,19 +74,18 @@ min-h-32
 
 <button
 className="
-bg-gradient-to-r
+bg-linear-to-r
 from-blue-600
 to-cyan-600
 text-white
 px-8
 py-3
 w-full
-rounded-lg
+rounded-xl
 font-bold
 hover:shadow-lg
 transition
 text-lg
-rounded-xl
 "
 >
 
@@ -101,3 +100,4 @@ Send Message
 )
 
 }
+

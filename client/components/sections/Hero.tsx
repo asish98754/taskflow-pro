@@ -7,7 +7,7 @@ export default function Hero(){
 return (
 
 <section
-className="min-h-screen flex items-center justify-center py-20 px-4 bg-gradient-to-b from-blue-50 via-cyan-50 to-blue-100"
+className="min-h-screen flex items-center justify-center py-20 px-4 bg-linear-to-b from-blue-50 via-cyan-50 to-blue-100"
 >
 
 <div
@@ -15,7 +15,7 @@ className="max-w-5xl mx-auto text-center"
 >
 
 <h1
-className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent mb-6"
+className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight bg-linear-to-r from-blue-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent mb-6"
 >
 
 Manage Your Business Tasks

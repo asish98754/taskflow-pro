@@ -6,7 +6,7 @@ return (
 
 <footer
 className="
-bg-gradient-to-r
+bg-linear-to-r
 from-blue-900
 via-blue-800
 to-cyan-900
@@ -89,3 +89,4 @@ text-blue-100
 )
 
 }
+

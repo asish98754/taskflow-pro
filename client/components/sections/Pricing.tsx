@@ -16,7 +16,7 @@ return (
 className="
 py-20
 px-6
-bg-gradient-to-b
+bg-linear-to-b
 from-white
 to-blue-50
 "
@@ -28,7 +28,7 @@ className="
 text-5xl
 font-bold
 text-center
-bg-gradient-to-r
+bg-linear-to-r
 from-blue-600
 to-cyan-600
 bg-clip-text
@@ -86,7 +86,7 @@ className="
 mt-8
 w-full
 rounded-lg
-bg-gradient-to-r
+bg-linear-to-r
 from-blue-600
 to-cyan-600
 text-white

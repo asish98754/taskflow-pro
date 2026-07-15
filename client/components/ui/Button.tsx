@@ -30,7 +30,7 @@ shadow-lg
 ${
 variant==="primary"
 ?
-"bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-2xl hover:from-blue-700 hover:to-cyan-700"
+"bg-linear-to-r from-blue-600 to-cyan-600 text-white hover:shadow-2xl hover:from-blue-700 hover:to-cyan-700"
 :
 "border-2 border-blue-600 text-blue-600 bg-white hover:bg-blue-50 hover:border-blue-700"
 }
@@ -46,3 +46,4 @@ variant==="primary"
 )
 
 }
+

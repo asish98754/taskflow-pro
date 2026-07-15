@@ -8,7 +8,7 @@ return (
 className="
 py-20
 px-6
-bg-gradient-to-b
+bg-linear-to-b
 from-white
 to-blue-50
 "
@@ -19,7 +19,7 @@ className="
 text-5xl
 font-bold
 text-center
-bg-gradient-to-r
+bg-linear-to-r
 from-blue-600
 to-cyan-600
 bg-clip-text
@@ -48,7 +48,7 @@ mb-12
 "
 >
 
-"TaskFlow improved our team's productivity dramatically."
+&quot;TaskFlow improved our team&rsquo;s productivity dramatically.&quot;
 
 </p>
 
