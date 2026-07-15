@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Navbar(){
 
 return (
@@ -53,9 +55,9 @@ Pricing
 Contact
 </a>
 
-<button className="px-6 py-2 rounded-lg bg-white text-blue-600 font-bold hover:bg-blue-50 transition transform hover:scale-105">
+<Link href="/login" className="px-6 py-2 rounded-lg bg-white text-blue-600 font-bold hover:bg-blue-50 transition transform hover:scale-105">
 Login
-</button>
+</Link>
 
 </div>
 
