@@ -28,16 +28,15 @@ const setToken = (token: string | null) => {
   }
 };
 
-api.interceptors.request.use((config: InternalAxiosRequestConfig) => {
-  const token = getToken();
-  if (token) {
-    config.headers = config.headers ?? ({} as AxiosRequestHeaders);
-    if (typeof config.headers === "object" && !Array.isArray(config.headers)) {
-      (config.headers as AxiosRequestHeaders).Authorization = `Bearer ${token}`;
-    }
+const isTokenExpired = (token: string) => {
+  try {
+    const payload = JSON.parse(atob(token.split(".")[1]));
+    if (typeof payload.exp !== "number") return false;
+    return Date.now() >= payload.exp * 1000;
+  } catch {
+    return true;
   }
-  return config;
-});
+};
 
 const signup = async (payload: SignupPayload) => {
   const response = await api.post("/auth/signup", payload);
@@ -46,7 +45,7 @@ const signup = async (payload: SignupPayload) => {
 
 const login = async (payload: LoginPayload) => {
   const response = await api.post("/auth/login", payload);
-  const token = response.data?.data?.token;
+  const token = response.data?.data?.token || response.data?.token;
   if (token) {
     setToken(token);
   }
@@ -59,13 +58,24 @@ const logout = async () => {
 };
 
 const getProfile = () => api.get("/auth/profile");
+const getCurrentUser = () => api.get("/auth/me");
 
-const isAuthenticated = () => Boolean(getToken());
+const isAuthenticated = () => {
+  const token = getToken();
+  if (!token) return false;
+  if (isTokenExpired(token)) {
+    setToken(null);
+    return false;
+  }
+  return true;
+};
 
 export default {
   signup,
   login,
   logout,
   getProfile,
+  getCurrentUser,
   isAuthenticated,
+  getToken,
 };

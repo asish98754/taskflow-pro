@@ -9,5 +9,6 @@ router.post("/signup", asyncHandler(authController.signup));
 router.post("/login", asyncHandler(authController.login));
 router.post("/logout", asyncHandler(authController.logout));
 router.get("/profile", authenticate, asyncHandler(authController.profile));
+router.get("/me", authenticate, asyncHandler(authController.profile));
 
 export default router;

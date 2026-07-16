@@ -3,6 +3,7 @@ import cors from "cors";
 import userRoutes from "./routes/user.routes";
 import testRoutes from "./routes/test.routes";
 import authRoutes from "./routes/auth.routes";
+import taskRoutes from "./routes/task.routes";
 import { errorHandler } from "./middleware/error.middleware";
 
 const app = express();
@@ -26,6 +27,11 @@ app.use(
 app.use(
   "/api/auth",
   authRoutes
+);
+
+app.use(
+  "/api/tasks",
+  taskRoutes
 );
 
 app.use(

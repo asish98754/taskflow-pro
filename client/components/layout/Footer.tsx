@@ -1,92 +1,84 @@
 "use client";
 
-export default function Footer(){
+export default function Footer() {
+  return (
+    <footer className="bg-slate-950 text-slate-100 mt-20 py-16 px-6 sm:px-10 lg:px-12">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(220px,1fr)_repeat(3,minmax(180px,1fr))]">
+        <div className="space-y-4">
+          <h4 className="text-2xl font-bold text-white">TaskFlow Pro</h4>
+          <p className="max-w-md text-sm leading-7 text-slate-400">
+            Built for teams that want clear workflows, better planning, and more predictable deliveries.
+          </p>
+        </div>
 
-return (
+        <div>
+          <h4 className="font-semibold text-white">Product</h4>
+          <ul className="mt-4 space-y-3 text-sm text-slate-400">
+            <li>
+              <a href="#features" className="transition hover:text-white">
+                Features
+              </a>
+            </li>
+            <li>
+              <a href="#pricing" className="transition hover:text-white">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="#faq" className="transition hover:text-white">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
 
-<footer
-className="
-bg-linear-to-r
-from-blue-900
-via-blue-800
-to-cyan-900
-text-white
-mt-20
-py-16
-px-6
-"
->
+        <div>
+          <h4 className="font-semibold text-white">Company</h4>
+          <ul className="mt-4 space-y-3 text-sm text-slate-400">
+            <li>
+              <a href="#" className="transition hover:text-white">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#" className="transition hover:text-white">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="#" className="transition hover:text-white">
+                Careers
+              </a>
+            </li>
+          </ul>
+        </div>
 
-<div
-className="
-max-w-6xl
-mx-auto
-grid
-md:grid-cols-4
-gap-8
-mb-8
-"
->
+        <div>
+          <h4 className="font-semibold text-white">Connect</h4>
+          <ul className="mt-4 space-y-3 text-sm text-slate-400">
+            <li>
+              <a href="#contact" className="transition hover:text-white">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="#" className="transition hover:text-white">
+                Privacy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="transition hover:text-white">
+                Terms
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-<div>
-<h4 className="font-bold text-lg mb-4">Product</h4>
-<ul className="space-y-2 text-blue-100">
-<li><a href="#" className="hover:text-white transition">Features</a></li>
-<li><a href="#" className="hover:text-white transition">Pricing</a></li>
-<li><a href="#" className="hover:text-white transition">Security</a></li>
-</ul>
-</div>
-
-<div>
-<h4 className="font-bold text-lg mb-4">Company</h4>
-<ul className="space-y-2 text-blue-100">
-<li><a href="#" className="hover:text-white transition">About</a></li>
-<li><a href="#" className="hover:text-white transition">Blog</a></li>
-<li><a href="#" className="hover:text-white transition">Careers</a></li>
-</ul>
-</div>
-
-<div>
-<h4 className="font-bold text-lg mb-4">Legal</h4>
-<ul className="space-y-2 text-blue-100">
-<li><a href="#" className="hover:text-white transition">Privacy</a></li>
-<li><a href="#" className="hover:text-white transition">Terms</a></li>
-<li><a href="#" className="hover:text-white transition">Contact</a></li>
-</ul>
-</div>
-
-<div>
-<h4 className="font-bold text-lg mb-4">Connect</h4>
-<ul className="space-y-2 text-blue-100">
-<li><a href="#" className="hover:text-white transition">Twitter</a></li>
-<li><a href="#" className="hover:text-white transition">LinkedIn</a></li>
-<li><a href="#" className="hover:text-white transition">GitHub</a></li>
-</ul>
-</div>
-
-</div>
-
-<div
-className="
-border-t
-border-blue-700
-pt-8
-text-center
-text-blue-100
-"
->
-
-<p>
-
-© 2026 TaskFlow Pro. All rights reserved.
-
-</p>
-
-</div>
-
-</footer>
-
-)
-
+      <div className="mx-auto mt-12 max-w-7xl border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
+        © 2026 TaskFlow Pro. All rights reserved.
+      </div>
+    </footer>
+  );
 }
 

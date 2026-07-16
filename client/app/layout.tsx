@@ -1,4 +1,5 @@
 import "./globals.css";
+import AuthProvider from "@/providers/AuthProvider";
 
 export const metadata = {
   title: "TaskFlow Pro",
@@ -14,13 +15,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-
       <body>
-
-        {children}
-
+        <AuthProvider>{children}</AuthProvider>
       </body>
-
     </html>
   );
 }

@@ -27,14 +27,14 @@ enum Role {
 model Task {
   id String @id @default(uuid())
   title String
-  description String?
+  description String
+  status Status @default(TODO)
   priority Priority @default(MEDIUM)
-  status Status @default(PENDING)
-  deadline DateTime?
-  userId String
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dueDate DateTime
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 enum Priority {
@@ -44,7 +44,7 @@ enum Priority {
 }
 
 enum Status {
-  PENDING
+  TODO
   IN_PROGRESS
   COMPLETED
 }
